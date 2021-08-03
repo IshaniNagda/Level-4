@@ -24,3 +24,18 @@ def rotate(self, head, k):
         
         return head
  """
+
+def rotate(self, head, k):
+        temp=head
+        while temp.next:
+            temp=temp.next
+        
+        temp.next= head
+        
+        while k!=0:
+            end=head
+            head=head.next
+            k-=1
+        
+        end.next= None
+        return head
